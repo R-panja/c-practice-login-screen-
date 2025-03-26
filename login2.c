@@ -75,6 +75,9 @@ void signup(){
     int compare = strcmp(u.password,password2);
 if(compare==0){
     printf("sign up sucessful");
+    FILE *fp=fopen("account.txt","w");
+    fwrite(&u,sizeof(struct account),1,fp);
+    
 }
 else{
     printf("wrong password");
@@ -83,7 +86,11 @@ else{
 
 }
 
+void login(){
 
+
+
+}
 
 
 
